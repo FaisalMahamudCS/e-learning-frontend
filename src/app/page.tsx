@@ -8,14 +8,31 @@ import review1 from  '/public/Ellipse61.png'
 import teacher1 from  '/public/teacher1.png'
 import profile2 from  '/public/profile2.png'
 import profile3 from  '/public/profile3.png'
+import logo from  '/public/logo.png'
+import logo2 from  '/public/logo2.png'
 import { CiStar } from "react-icons/ci";
 import { IoIosStar } from "react-icons/io";
 import { ImQuotesLeft } from "react-icons/im";
 import Button from "../../components/Home/Button";
+import Searchbar from "../../components/Searchbar";
 
 export default function HomePage() {
   return (
 <div className="bg-[#FFFFFF]">
+  <div className="flex justify-between items-center content-center px-[10px]">
+
+    <div className="flex justify-between items-center">
+<Image src={logo2} className=""/>
+
+<p>Learnhub</p>
+</div>
+<div className="">
+<Searchbar placeholder="Search Your course"/>
+
+</div>
+<p>Catagories</p>
+<Button label="Login" classNames="h-[40px]"/>
+  </div>
   <div className="flex justify-between m-[25px] gap-6">
     <div className="flex flex-col gap-6 ">
   <h2 className="text-[40px] text-gray-900 font-bold font-Inter ">Unlock Your Potential with Byway</h2>
@@ -28,6 +45,7 @@ Start your instruction today
 </div>
 
 </div>
+
 <Image src={profile1} />  
 </div>
 <div className="p-[80px] bg-[#F8FAFC] ">
@@ -330,7 +348,7 @@ Start your instruction today
   <div className="flex flex-col ">
   <p className="font-bold mb-2">Become an Instructor</p>
   <p className="mb-4">Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
-  <Button label="Start Your Instructor Journey"/>
+  <Button classNames="bg-[#2563EB] w-[255px] h-[51px] text-white" label="Start Your Instructor Journey"/>
   </div>
   </div>
   
@@ -343,13 +361,40 @@ Start your instruction today
   <div className="flex flex-col ">
   <p className="font-bold mb-2">Transform your life through education</p>
   <p className="mb-4">ILearners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-  <Button label="Checkout Courses"/>
+  <Button classNames="bg-[#2563EB] w-[255px] h-[51px] text-white" label="Checkout Courses"/>
   </div>
   </div>
   <div>
   <Image src={profile2}/>
   </div>
 </div>
+</div>
+<div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px]">
+
+<div className="flex flex-col text-white ">
+  <Image src={logo2}/>
+  <p>Empowering learners through accessible and engaging online education.
+Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences. </p>
+</div>
+<div className="flex flex-col">
+  <p>Get Help</p>
+  <p>Contact Us</p>
+  <p>Latest</p>
+  <p>Faq</p>
+</div>
+  <div className="flex flex-col">
+    <p>Program</p>
+    <p>Art </p>
+    <p>Design</p>
+    <p>Faq</p>
+  </div>
+  <div className="flex flex-col">
+    <p>Contact US</p>
+    <p>Address: 123 Main Street, Anytown, CA 12345 </p>
+    <p>Tel: +(123) 456-7890</p>
+    <p>Mail  test@mail.com</p>
+    <Image src={logo}/>
+  </div>
 </div>
 
 </div>

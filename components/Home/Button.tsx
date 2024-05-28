@@ -1,12 +1,13 @@
 import React from 'react'
 
 type Props = {
-    label:string
+    label:string,
+    classNames?:string
 }
 
-function Button({label}: Props) {
+function Button({label,classNames}: Props) {
   return (
-<button className="bg-[#2563EB] w-[255px] h-[51px] text-white">
+<button className={classNames}>
 {label}</button>
    )
 }
