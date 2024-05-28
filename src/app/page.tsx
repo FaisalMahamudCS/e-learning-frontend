@@ -15,24 +15,12 @@ import { IoIosStar } from "react-icons/io";
 import { ImQuotesLeft } from "react-icons/im";
 import Button from "../../components/Home/Button";
 import Searchbar from "../../components/Searchbar";
+import Navbar from "../../components/Navbar";
 
 export default function HomePage() {
   return (
 <div className="bg-[#FFFFFF]">
-  <div className="flex justify-between items-center content-center px-[10px]">
-
-    <div className="flex justify-between items-center">
-<Image src={logo2} className=""/>
-
-<p>Learnhub</p>
-</div>
-<div className="">
-<Searchbar placeholder="Search Your course"/>
-
-</div>
-<p>Catagories</p>
-<Button label="Login" classNames="h-[40px]"/>
-  </div>
+  <Navbar/>
   <div className="flex justify-between m-[25px] gap-6">
     <div className="flex flex-col gap-6 ">
   <h2 className="text-[40px] text-gray-900 font-bold font-Inter ">Unlock Your Potential with Byway</h2>

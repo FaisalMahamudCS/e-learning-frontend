@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.inputStyles{
+    @apply h-[56px] p-[16px] mx-[0] my-2 focus:outline-none focus:border-[#94A3B8] focus:ring-2 focus:ring-[#94A3B8] border border-gray-200 rounded-lg bg-white w-full
+}
