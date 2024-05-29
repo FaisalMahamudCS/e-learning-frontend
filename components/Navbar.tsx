@@ -13,6 +13,9 @@ const Navbar = () => {
     const onClick=()=>{
         router.push('/signup')
     }
+    const loginClick=()=>{
+        router.push('/login')
+    }
     return (
        <>
        <div className="flex justify-between items-center content-center px-[10px]">
@@ -27,7 +30,7 @@ const Navbar = () => {
 
 </div>
 <p>Catagories</p>
-<Button label="Login" classNames="h-[40px]"/>
+<Button label="Login" onClick={loginClick} classNames="h-[40px]"/>
 <Button label="Sign Up" classNames="h-[40px]" onClick={onClick}/>
 </div></>
     );
