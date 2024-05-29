@@ -3,11 +3,13 @@ import React from 'react'
 type Props = {
     label:string,
     classNames?:string
+    onClick?: () => void;
+
 }
 
-function Button({label,classNames}: Props) {
+function Button({label,classNames,onClick }: Props) {
   return (
-<button className={classNames}>
+<button onClick={onClick} className={classNames}>
 {label}</button>
    )
 }

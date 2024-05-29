@@ -1,10 +1,18 @@
+"use client"
 import React from 'react';
 import Button from './Home/Button';
 import Searchbar from './Searchbar';
 import Image from 'next/image';
 import logo2 from  '../public/logo2.png'
+import { Router } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+    const router=useRouter()
+
+    const onClick=()=>{
+        router.push('/signup')
+    }
     return (
        <>
        <div className="flex justify-between items-center content-center px-[10px]">
@@ -20,6 +28,7 @@ const Navbar = () => {
 </div>
 <p>Catagories</p>
 <Button label="Login" classNames="h-[40px]"/>
+<Button label="Sign Up" classNames="h-[40px]" onClick={onClick}/>
 </div></>
     );
 };
