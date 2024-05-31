@@ -17,6 +17,7 @@ import { ImQuotesLeft } from "react-icons/im";
 import Button from "../../components/Home/Button";
 import Searchbar from "../../components/Searchbar";
 import Navbar from "../../components/Navbar";
+import Category from "../../components/Category";
 
 export default function Home() {
   return (
@@ -102,6 +103,7 @@ Start your instruction today
 </div>
 <div className="px-[80.5px] py-[80.5px]">
 <h2 className="m-[10px] font-bold">Top Courses</h2>
+{/* <Category/> */}
 <div className="flex justify-between gap-[24px]">
 <div className="flex justify-between ">
   <div className="flex flex-col gap-[6px] p-4 box-border border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
@@ -358,9 +360,9 @@ Start your instruction today
   </div>
 </div>
 </div>
-<div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px]">
+<div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px] py-[80px]">
 
-<div className="flex flex-col text-white ">
+<div className="flex flex-col text-white  ">
   <Image src={logo2}/>
   <p>Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences. </p>
