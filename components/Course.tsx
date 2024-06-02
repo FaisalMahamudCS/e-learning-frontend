@@ -2,10 +2,14 @@ import React from 'react';
 import Navbar from './Navbar';
 import image4 from  '/public/image4.png'
 import ellipse4 from  '/public/ellipse4.png'
+import Ellipse19 from  '/public/Ellipse19.png'
 import ellipse5 from  '/public/ellipse5.png'
 import Image from 'next/image';
 import Button from './Home/Button';
 import { IoIosStar } from 'react-icons/io';
+import Testimonial from './Testimonial';
+import Courses from './Courses';
+import Footer from './Footer';
 
 const Course = () => {
     return (
@@ -13,7 +17,7 @@ const Course = () => {
         <Navbar/>
         <div className="flex justify-between">
 <div className='pl-[80px]'>
-    <p className='text-[40px] mt-[17px] font-bold'> Introduction to User Experience Design</p>
+    <p className='text-[40px] mt-[17px] mb-[18px] font-bold'> Introduction to User Experience Design</p>
     <p>This course is meticulously crafted to provide you with a foundational understanding of the principles, methodologies, and tools that drive exceptional user experiences in the digital landscape.</p>
     <div className="flex mt-[24px] justify-between items-center w-[500px] ">
 {/* <CiStar /> */}
@@ -111,6 +115,92 @@ const Course = () => {
             </div>
             </div>
         </div>
+        <div className='pl-[80px] mt-[48px]'>
+            <h1 className='font-semibold'>Learner Review</h1>
+            <div className='flex gap-1 mt-[24px]  '>
+    <IoIosStar className="text-[#EAB308]"/>
+
+ <p className='font-bold'>4.5</p>
+ <p>146,951 reviews</p>
+    </div>
+<div className="flex gap-[163px] ">
+   
+<div> <div className="flex mt-[16px] justify-between items-center w-[132px]  ">
+{/* <CiStar /> */}
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+80%
+</div>
+<div className="flex mt-[16px] justify-between items-center w-[132px] ">
+{/* <CiStar /> */}
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+80%
+</div>
+<div className="flex mt-[16px] justify-between items-center w-[132px] ">
+{/* <CiStar /> */}
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+20%
+</div>
+<div className="flex mt-[16px] justify-between items-center w-[132px] ">
+{/* <CiStar /> */}
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+70%
+</div>
+<div className="flex mt-[16px] justify-between items-center w-[132px] ">
+{/* <CiStar /> */}
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className="text-[#EAB308]"/>
+<IoIosStar  className='text-[#CBD5E1]'/>
+10%
+</div>
+</div>
+<div>
+    <div className='flex gap-[40px]'>
+        <div className='mx-[12px] '>
+<Image src={Ellipse19}/>
+<p className='whitespace-nowrap'>Mark Doe</p>
+</div>
+<div>
+    <div className='flex'>
+<IoIosStar className="text-[#EAB308]"/>
+<p>5
+Reviewed on 22nd March, 2024</p>
+
+</div>
+<p>I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding.</p>
+</div>
+</div>
+</div>
+<div></div>
+
+</div>
+        </div>
+        <div className='mx-[80px] mt-[80px] '>
+            <p className='font-bold mb-[24px]'  >What Our Customer Say About Us</p>
+            <Testimonial/>
+        </div>
+        <div className='mx-[80px] my-[80px] '>
+            <p className='font-bold mb-[24px]'  >More Course Like that</p>
+            <Courses/>
+        </div>
+        <Footer/>
         </>
     );
 };
