@@ -3,7 +3,7 @@ import { IoIosStar } from 'react-icons/io';
 
 // Define the type for the component props
 interface StarRatingProps {
-  reviews: number;
+  reviews?: number;
 }
 
 const StarRating: React.FC<StarRatingProps> = ({ reviews }) => {
@@ -14,7 +14,7 @@ const StarRating: React.FC<StarRatingProps> = ({ reviews }) => {
       <IoIosStar className="text-[#EAB308]" />
       <IoIosStar className="text-[#EAB308]" />
       <IoIosStar className="text-[#EAB308]" />
-      <p className="ml-2">{reviews} Reviews</p>
+   { reviews&&  <p className="ml-2">{reviews} Reviews</p>}
     </div>
   );
 };

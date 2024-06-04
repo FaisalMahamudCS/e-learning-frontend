@@ -5,6 +5,8 @@ import profile4 from  '../public/profile4.png'
 import Image from 'next/image';
 import Courses from './Courses';
 import Footer from './Footer';
+import Review from './Review';
+import ProfileEdit from './ProfileEdit';
 
 const Profile = () => {
     const [selectedContent, setSelectedContent] = useState('review');
@@ -18,7 +20,7 @@ const Profile = () => {
                     <p className='text-center'>John Doe</p>
                     <div></div>
                     <div className="w-1/4  p-4">
- <button onClick={() => setSelectedContent('review')} className="  mb-4 p-2 border-b ">Profile</button>
+ <button onClick={() => setSelectedContent('review')} className="  mb-4 p-2 ">Profile</button>
 
         <button onClick={() => setSelectedContent('review')} className=" w-full mb-4 p-2">Review</button>
         <button onClick={() => setSelectedContent('course')} className=" w-full p-2 ">Course</button>
@@ -28,8 +30,22 @@ const Profile = () => {
       </div>
                 </div>
                 <div>
+                    {
+                        selectedContent=='course'&&
+                        <>
                     <p>Course</p>
                     <Courses/>
+                    </>
+}
+                    {
+                        selectedContent=='review'&&
+                        
+                    <Review/>
+}
+{
+  selectedContent=='profile'&&<ProfileEdit/>
+
+}
                 </div>
             </div>
             <Footer/>
