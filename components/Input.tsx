@@ -18,9 +18,6 @@ interface InputComponentProps {
     placeholder
   }) => {
     return (
-      <div >
-        <label>
-          {label}
           <input
             type={type}
             value={value}
@@ -28,8 +25,6 @@ interface InputComponentProps {
             className={className}
             placeholder={placeholder}
           />
-        </label>
-      </div>
     );
   };
   

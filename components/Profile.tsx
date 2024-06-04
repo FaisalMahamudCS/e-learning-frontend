@@ -9,7 +9,7 @@ import Review from './Review';
 import ProfileEdit from './ProfileEdit';
 
 const Profile = () => {
-    const [selectedContent, setSelectedContent] = useState('review');
+    const [selectedContent, setSelectedContent] = useState('profile');
 
     return (
         <div>
@@ -20,7 +20,7 @@ const Profile = () => {
                     <p className='text-center'>John Doe</p>
                     <div></div>
                     <div className="w-1/4  p-4">
- <button onClick={() => setSelectedContent('review')} className="  mb-4 p-2 ">Profile</button>
+ <button onClick={() => setSelectedContent('profile')} className="  mb-4 p-2 ">Profile</button>
 
         <button onClick={() => setSelectedContent('review')} className=" w-full mb-4 p-2">Review</button>
         <button onClick={() => setSelectedContent('course')} className=" w-full p-2 ">Course</button>
@@ -29,7 +29,7 @@ const Profile = () => {
 
       </div>
                 </div>
-                <div>
+                <div className='w-full'>
                     {
                         selectedContent=='course'&&
                         <>
