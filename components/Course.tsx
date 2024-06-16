@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Navbar from './Navbar';
 import image4 from  '/public/image4.png'
@@ -10,14 +11,33 @@ import { IoIosStar } from 'react-icons/io';
 import Testimonial from './Testimonial';
 import Courses from './Courses';
 import Footer from './Footer';
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
+import { useSearchParams } from 'next/navigation';
 
 const Course = () => {
+    const searchParam=useSearchParams();
+
+    async function getCourse(){
+         const courseId=searchParam.get("id")
+        
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/course/${courseId}`);
+      const users = (await res.data) ;
+      return users;
+      }
+    
+        const { data } = useQuery({
+        queryKey: ['courseDetail'],
+        queryFn: () => getCourse(),
+    
+        staleTime: 5 * 1000,
+      });
     return (
         <>
         <Navbar/>
         <div className="flex justify-between">
 <div className='pl-[80px]'>
-    <p className='text-[40px] mt-[17px] mb-[18px] font-bold'> Introduction to User Experience Design</p>
+    <p className='text-[40px] mt-[17px] mb-[18px] font-bold'>{data?.name}</p>
     <p>This course is meticulously crafted to provide you with a foundational understanding of the principles, methodologies, and tools that drive exceptional user experiences in the digital landscape.</p>
     <div className="flex mt-[24px] justify-between items-center w-[500px] ">
 {/* <CiStar /> */}
