@@ -15,6 +15,8 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
 import Lesson from './Lesson';
+import { LessonAttributes } from '../types/lesson.type';
+import Reviews from './Reviews';
 
 const Course = () => {
     const searchParam=useSearchParams();
@@ -33,6 +35,7 @@ const Course = () => {
     
         staleTime: 5 * 1000,
       });
+      console.log("courseReview",data?.CourseReviews)
     return (
         <>
         <Navbar/>
@@ -92,51 +95,10 @@ const Course = () => {
         </div>
         <div className='pl-[80px]'>
         <p className='font-bold'>Syllabus</p>
-        {data?.Lessons&&data?.Lessons.map((lesson) => (
+        {data?.Lessons&&data?.Lessons.map((lesson:LessonAttributes) => (
                 <Lesson key={lesson.id} lesson={lesson} />
             ))}
-            <div className='flex w-1/2  border-b border-[#e2e8f0]'>
-                <div>
-
-                </div>
-            <div className='py-[24px] flex justify-between  gap-[300px] '>
-                <div >
-                <p>Introduction to UX Design</p>
-                </div>
-                <div className='flex justify-between gap-3'>
-                <p className=''>5 Lesson</p>
-                <p>1 hour </p> 
-                </div>
-            </div>
-            </div>
-            <div className='flex w-1/2  border-b border-[#e2e8f0]'>
-                <div>
-
-                </div>
-            <div className='py-[24px] flex justify-between  gap-[300px] '>
-                <div >
-                <p>Introduction to UX Design</p>
-                </div>
-                <div className='flex justify-between gap-3'>
-                <p className=''>5 Lesson</p>
-                <p>1 hour </p> 
-                </div>
-            </div>
-            </div>
-            <div className='flex w-1/2  border-b border-[#e2e8f0]'>
-                <div>
-
-                </div>
-            <div className='py-[24px] flex justify-between  gap-[300px] '>
-                <div >
-                <p>Introduction to UX Design</p>
-                </div>
-                <div className='flex justify-between gap-3'>
-                <p className=''>5 Lesson</p>
-                <p>1 hour </p> 
-                </div>
-            </div>
-            </div>
+       
         </div>
         <div className='pl-[80px] mt-[48px]'>
             <h1 className='font-semibold'>Learner Review</h1>
@@ -195,21 +157,10 @@ const Course = () => {
 </div>
 </div>
 <div>
-    <div className='flex gap-[40px]'>
-        <div className='mx-[12px] '>
-<Image src={Ellipse19}/>
-<p className='whitespace-nowrap'>Mark Doe</p>
-</div>
-<div>
-    <div className='flex'>
-<IoIosStar className="text-[#EAB308]"/>
-<p>5
-Reviewed on 22nd March, 2024</p>
-
-</div>
-<p>I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding.</p>
-</div>
-</div>
+{data?.CourseReviews&&data?.CourseReviews.map((CourseReviews) => (
+                <Reviews key={CourseReviews.id} CourseReview={CourseReviews} />
+            ))}
+   
 </div>
 <div></div>
 
