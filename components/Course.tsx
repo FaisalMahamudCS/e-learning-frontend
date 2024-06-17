@@ -14,6 +14,7 @@ import Footer from './Footer';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
+import Lesson from './Lesson';
 
 const Course = () => {
     const searchParam=useSearchParams();
@@ -57,8 +58,8 @@ const Course = () => {
 </div>
 <div>
     <div className='p-[22px]  box-border border border-gray-200 rounded-2xl shadow-md bg-white mr-[82px] mt-[25px]' >
-<Image src={image4} className=''/>
-<p className='text-[24px] font-bold'>49$</p> 
+    <Image src={data?.photo} width={400} height={300}/>
+    <p className='text-[24px] font-bold'>49$</p> 
 <Button label='Add To Cart' classNames=' w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white'/>
 <Button label='Buy Now' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5  rounded-md bg-[#020617] text-white'/>
 
@@ -77,7 +78,7 @@ const Course = () => {
       <p>{data?.instructor}</p>
       <div className='flex justify-between w-[271px] gap-[18px]'>
 <div>
-    <Image src={data?.photo}/>
+    {/* <Image src={data?.photo} width={300} height={300}/> */}
     
 </div>
 <div className='w-[135px] pt-[18px]'>
@@ -90,8 +91,10 @@ const Course = () => {
         </div>
         </div>
         <div className='pl-[80px]'>
-        <p>Syllabus</p>
-        
+        <p className='font-bold'>Syllabus</p>
+        {data?.Lessons&&data?.Lessons.map((lesson) => (
+                <Lesson key={lesson.id} lesson={lesson} />
+            ))}
             <div className='flex w-1/2  border-b border-[#e2e8f0]'>
                 <div>
 
