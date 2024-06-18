@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import isAuth from "../../components/RequireAuth";
 // import './globals.css';
 import ReactQueryProvider from "./providers/ReactQueryProvider";
 import Link from "next/link";

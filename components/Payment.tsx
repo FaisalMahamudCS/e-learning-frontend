@@ -7,6 +7,7 @@ import CheckoutForm from './CheckoutForm';
 import { useRouter, useSearchParams } from 'next/navigation';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import Navbar from './Navbar';
 const stripePromise = loadStripe('pk_test_51L2a8yGIi5IetcrLOT8S6J6l3hU0Ioh3W25tLjgwVIYXimdTZ9V7JxjgUtVSJ7OF9D76LBvqZccilfYPTWN6IeyI003s7XUspm');
 
 
@@ -40,7 +41,10 @@ const Payment = () => {
   
     return (
         <div>
-        <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
+            <Navbar/>
+            <div className='mx-[80px]'>
+            <p className='font-bold text-[31px] mb-[20px] mt-[20px]'>Checkout Page</p>
+        <div class="card w-50 max-w-md bg-base-100  my-12">
             <div class="card-body">
                 {/* <p className="text-success font-bold">Greeting {order.userName}</p> */}
                 <h2 class="card-title"> Pay for {data?.name}</h2>
@@ -48,13 +52,14 @@ const Payment = () => {
                 <p>Please pay: ${data?.price}</p>
             </div>
         </div>
-        <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
-            <div class="card-body">
+        <div class="">
+            <div class="w-full">
                 <Elements stripe={stripePromise}>
                     <CheckoutForm order={data} />
                 </Elements>
             </div>
         </div>
+    </div>
     </div>
     );
 };

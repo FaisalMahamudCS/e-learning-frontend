@@ -50,7 +50,7 @@ const ShoppingCart = () => {
                     <Heading children="Order Details"/>
 
                         <OrderDetails discount={200} price={300} tax={20} total={500}/>
-                     <Button label='Proceed To Checkoust' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white' onClick={redirectShipping}/>
+                     <Button label='Proceed To Checkout' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white' onClick={redirectShipping}/>
                     </div>
                 </div>
             </div>

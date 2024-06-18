@@ -1,6 +1,8 @@
 import { CardElement } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
+import OrderDetails from './OrderDetails';
+import Button from './Home/Button';
 const CheckoutForm = ({order}) => {
     const stripe = useStripe();
     const elements = useElements();
@@ -27,7 +29,7 @@ const price=100
                 }
             });
 
-    }, [price])
+    }, [])
     const handleSubmit=async (event) =>{
         event.preventDefault();
         if (!stripe || !elements) {
@@ -94,8 +96,9 @@ const price=100
 
     }
     return (
-        <div>
-           <form onSubmit={handleSubmit}>
+        <div className='flex justify-between'>
+            
+           <form onSubmit={handleSubmit} className='w-1/2'>
                 <CardElement
                     options={{
                         style: {
@@ -112,10 +115,15 @@ const price=100
                         },
                     }}
                 />
-                <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe || !clientSecret || success}>
+           
+                <button className=' h-12 flex flex-row justify-center items-center px-6 py-2.5  my-10 w-[210px] rounded-md bg-[#020617] text-white' type="submit" disabled={!stripe || !clientSecret || success}>
                     Pay
                 </button>
-            </form>   
+            </form>
+            <div>
+                <OrderDetails price={100} discount={100} tax={10} total={500}/>
+                <Button label='Proceed To Checkout' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white' />
+                </div>   
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
             }
@@ -123,6 +131,7 @@ const price=100
                 success && <div className='text-green-500'>
                     <p>{success}  </p>
                     <p>Your transaction Id: <span className="text-orange-500 font-bold">{transactionId}</span> </p>
+                   
                 </div>
             }
         </div>

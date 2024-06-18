@@ -8,10 +8,14 @@ import Input from './Input';
 import InputComponent from './Input';
 import LabelComponent from './Label'
 import Button from './Home/Button'
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import auth from '../firebase.init'
 type Props = {
 }
 
 function Login({}: Props) {
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
     const [inputValue, setInputValue] = useState('');
 
   return (
@@ -38,6 +42,10 @@ function Login({}: Props) {
     </div>
     
     <Button label='Sign In' classNames='bg-[#020617] w-[183px] h-[51px] text-white mt-[22px]'/>
+    <button
+                    onClick={() => signInWithGoogle()}
+                    className="btn btn-outline"
+                >Continue with Google</button>
 </div>
 <div>
     <Image src={login}/>

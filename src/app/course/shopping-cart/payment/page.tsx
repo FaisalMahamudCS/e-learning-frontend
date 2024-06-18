@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Payment from '../../../../../components/Payment';
 import RequireAuth from '../../../../../components/RequireAuth';
@@ -11,4 +12,4 @@ const page = () => {
     );
 };
 
-export default page
+export default isAuth(page)
