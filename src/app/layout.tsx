@@ -1,10 +1,12 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 // import './globals.css';
 import ReactQueryProvider from "./providers/ReactQueryProvider";
+import Link from "next/link";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+   
+
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -13,17 +13,27 @@ import Courses from './Courses';
 import Footer from './Footer';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Lesson from './Lesson';
 import { LessonAttributes } from '../types/lesson.type';
 import Reviews from './Reviews';
+import { UrlObject } from 'url';
 
 const Course = () => {
-    const searchParam=useSearchParams();
+   
+    const router = useRouter();
 
+    const searchParam=useSearchParams();
+    const redirectShipping=()=>{
+        const courseId=searchParam.get("id")
+
+        router.push(`/course/shopping-cart?id=${courseId}`,undefined);
+
+    }
     async function getCourse(){
          const courseId=searchParam.get("id")
-        
+
+   
         const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/course/${courseId}`);
       const users = (await res.data) ;
       return users;
@@ -64,7 +74,7 @@ const Course = () => {
     <Image src={data?.photo} width={400} height={300}/>
     <p className='text-[24px] font-bold'>49$</p> 
 <Button label='Add To Cart' classNames=' w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white'/>
-<Button label='Buy Now' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5  rounded-md bg-[#020617] text-white'/>
+<Button label='Buy Now' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5  rounded-md bg-[#020617] text-white' onClick={redirectShipping}/>
 
 </div>
 

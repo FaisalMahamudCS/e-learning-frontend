@@ -1,4 +1,5 @@
 /* eslint-disable react/no-children-prop */
+"use client"
 import React from 'react';
 import Navbar from './Navbar';
 import Image from 'next/image';
@@ -8,8 +9,18 @@ import OrderDetails from './OrderDetails';
 import Heading from './Heading';
 import Button from './Home/Button';
 import Footer from './Footer';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const ShoppingCart = () => {
+    const router = useRouter();
+
+    const searchParam=useSearchParams();
+    const redirectShipping=()=>{
+        const courseId=searchParam.get("id")
+
+        router.push(`/course/shopping-cart/payment?id=${courseId}`,undefined);
+
+    }
     return (
         <div>
             <Navbar/>
@@ -39,7 +50,7 @@ const ShoppingCart = () => {
                     <Heading children="Order Details"/>
 
                         <OrderDetails discount={200} price={300} tax={20} total={500}/>
-                     <Button label='Proceed To Checkout' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white'/>
+                     <Button label='Proceed To Checkoust' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white' onClick={redirectShipping}/>
                     </div>
                 </div>
             </div>
