@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { IoIosStar } from 'react-icons/io';
 import Link from 'next/link';
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course }:any) => {
     return (
         <Link
   href={{

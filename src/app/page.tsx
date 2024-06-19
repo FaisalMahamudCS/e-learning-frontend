@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-duplicate-props */
 // import Home from "../app/src/";
 "use client"
 import Image from "next/image";
@@ -41,7 +43,7 @@ Start your instruction today
 
 </div>
 
-<Image src={profile1} />  
+<Image src={profile1} alt='Image' />  
 </div>
 <div className="p-[80px] bg-[#F8FAFC] ">
   <div className="flex justify-between">
@@ -66,7 +68,7 @@ Start your instruction today
   <div className="px-[93px] py-[24px]  box-border border border-[#E2E8F0] rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
     <div className=" rounded-[100px] bg-[#E0F2FE] h-[100px] w-[100px] ">
       <div className="flex  items-center   justify-center h-[100px] w-[100px]">
-<Image src={catagory1} className=" "/>
+<Image src={catagory1} className=" " alt='Image' />
 </div>
 
 </div>
@@ -76,7 +78,7 @@ Start your instruction today
   <div className="px-[93px] py-[24px]  box-border border border-[#E2E8F0] rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
     <div className=" rounded-[100px] bg-[#E0F2FE] h-[100px] w-[100px] ">
       <div className="flex  items-center   justify-center h-[100px] w-[100px]">
-<Image src={catagory1} className=" "/>
+<Image src={catagory1} className=" " alt='Image' />
 </div>
 
 </div>
@@ -86,7 +88,7 @@ Start your instruction today
   <div className="px-[93px] py-[24px]  box-border border border-[#E2E8F0] rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
     <div className=" rounded-[100px] bg-[#E0F2FE] h-[100px] w-[100px] ">
       <div className="flex  items-center   justify-center h-[100px] w-[100px]">
-<Image src={catagory1} className=" "/>
+<Image src={catagory1} className=" " alt='Image' />
 </div>
 
 </div>
@@ -96,7 +98,7 @@ Start your instruction today
   <div className="px-[93px] py-[24px]  box-border border border-[#E2E8F0] rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
     <div className=" rounded-[100px] bg-[#E0F2FE] h-[100px] w-[100px] ">
       <div className="flex  items-center   justify-center h-[100px] w-[100px]">
-<Image src={catagory1} className=" "/>
+<Image src={catagory1} className=" " alt='Image' />
 </div>
 
 </div>
@@ -116,7 +118,7 @@ Start your instruction today
 <h1 className="font-bold mb-[10px]">Top Instructor</h1>
 <div className="flex justify-between gap-4">
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Image' />
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -132,7 +134,7 @@ Start your instruction today
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Image' />
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -148,7 +150,7 @@ Start your instruction today
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Image' />
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -164,7 +166,7 @@ Start your instruction today
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Image' />
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -180,7 +182,7 @@ Start your instruction today
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Image' />
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -207,7 +209,7 @@ Start your instruction today
 
 <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
 <div className="flex my-2 ">
-<Image src={review1}/>
+<Image src={review1} alt='Image' />
 <div className="flex flex-col ml-[8px]">
 <p className="font-bold mt-[5px]">Jane Doe</p>
 <p>Designer</p>
@@ -219,7 +221,7 @@ Start your instruction today
 
 <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
 <div className="flex my-2 ">
-<Image src={review1}/>
+<Image src={review1} alt='Image' />
 <div className="flex flex-col ml-[8px]">
 <p className="font-bold mt-[5px]">Jane Doe</p>
 <p>Designer</p>
@@ -231,7 +233,7 @@ Start your instruction today
 
 <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
 <div className="flex my-2 ">
-<Image src={review1}/>
+<Image src={review1} alt='Image' />
 <div className="flex flex-col ml-[8px]">
 <p className="font-bold mt-[5px]">Jane Doe</p>
 <p>Designer</p>
@@ -244,7 +246,7 @@ Start your instruction today
 <div className="px-[159.5px] ">
 <div className="flex justify-between gap-[174px] ">
   <div>
-  <Image src={profile3}/>
+  <Image src={profile3} alt='Image' />
   </div>
   <div className="flex items-center justify-center" >
   <div className="flex flex-col ">
@@ -267,14 +269,14 @@ Start your instruction today
   </div>
   </div>
   <div>
-  <Image src={profile2}/>
+  <Image src={profile2} alt='Image' />
   </div>
 </div>
 </div>
 <div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px] py-[80px]">
 
 <div className="flex flex-col text-white  ">
-  <Image src={logo2}/>
+  <Image src={logo2} alt="Logo" alt='Image' />
   <p>Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences. </p>
 </div>
@@ -295,7 +297,7 @@ Byway is a leading online learning platform dedicated to providing high-quality,
     <p>Address: 123 Main Street, Anytown, CA 12345 </p>
     <p>Tel: +(123) 456-7890</p>
     <p>Mail  test@mail.com</p>
-    <Image src={logo}/>
+    <Image src={logo} alt='Image' />
   </div>
 </div>
 

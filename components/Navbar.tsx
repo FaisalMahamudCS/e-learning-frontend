@@ -21,7 +21,7 @@ const Navbar = () => {
        <div className="flex justify-between items-center content-center px-[10px]">
 
 <div className="flex justify-between items-center">
-<Image src={logo2} className=""/>
+<Image src={logo2} className="" alt='Image' />
 
 <p>Learnhub</p>
 </div>

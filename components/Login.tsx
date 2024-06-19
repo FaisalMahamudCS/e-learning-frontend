@@ -59,7 +59,7 @@ function Login({}: Props) {
                 >Continue with Google</button>
 </div>
 <div>
-    <Image src={login}/>
+    <Image src={login} alt='Image' />
 </div>
        </div>
     </>

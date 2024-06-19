@@ -64,14 +64,14 @@ const Course = () => {
 <p>{data?.duration}.{data?.lectures} Lectures. {data?.level} levels</p>
 </div>
 <div className='flex gap-2 items-center'>
-<Image src={ellipse5}/>
+<Image src={ellipse5} alt='Course'/>
 <p>Created by Ronal Richards</p>
 </div>
 <div></div>
 </div>
 <div>
     <div className='p-[22px]  box-border border border-gray-200 rounded-2xl shadow-md bg-white mr-[82px] mt-[25px]' >
-    <Image src={data?.photo} width={400} height={300}/>
+    <Image src={data?.photo} width={400} height={300} alt='Course'/>
     <p className='text-[24px] font-bold'>49$</p> 
 <Button label='Add To Cart' classNames=' w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5 my-4 rounded-md bg-[#020617] text-white'/>
 <Button label='Buy Now' classNames='w-[352px] h-12 flex flex-row justify-center items-center px-6 py-2.5  rounded-md bg-[#020617] text-white' onClick={redirectShipping}/>

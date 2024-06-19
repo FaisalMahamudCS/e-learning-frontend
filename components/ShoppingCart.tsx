@@ -31,7 +31,7 @@ const ShoppingCart = () => {
                     <div className=''>
                  <div className='flex gap-2 p-2 border border-gray-200 rounded-lg bg-white'>
                     <div>
-                    <Image src={cart}/>
+                    <Image src={cart} alt='Image' />
                     </div>
                     <div>
                     <div className='flex justify-between gap-[214px]'>

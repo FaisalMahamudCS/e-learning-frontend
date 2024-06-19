@@ -25,7 +25,7 @@ function Category({}: Props) {
 <div className="flex justify-between gap-[24px]">
 <div className="flex justify-between ">
   <div className="flex flex-col gap-[6px] p-4 box-border border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
-    <Image src={course1}/>
+    <Image src={course1} alt='Course'/>
     <p className="font-bold">Beginner Guide to design</p>
 <p>By Ronald Richards</p>
 <div className="flex justify-between">
@@ -49,7 +49,7 @@ function Category({}: Props) {
 </div>
 <div className="flex justify-between ">
   <div className="flex flex-col gap-[6px] p-4 box-border border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
-    <Image src={course1}/>
+    <Image src={course1} alt='Course'/>
     <p className="font-bold">Beginner Guide to design</p>
 <p>By Ronald Richards</p>
 <div className="flex justify-between items-center">
@@ -71,7 +71,7 @@ function Category({}: Props) {
 </div>
 <div className="flex justify-between ">
   <div className="flex flex-col gap-[6px] p-4 box-border border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
-    <Image src={course1}/>
+    <Image src={course1} alt='Course'/>
     <p className="font-bold">Beginner Guide to design</p>
 <p>By Ronald Richards</p>
 <div className="flex justify-between">
@@ -95,7 +95,7 @@ function Category({}: Props) {
 </div>
 <div className="flex justify-between ">
   <div className="flex flex-col gap-[6px] p-4 box-border border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white">
-    <Image src={course1}/>
+    <Image src={course1} alt='Course'/>
     <p className="font-bold">Beginner Guide to design</p>
 <p>By Ronald Richards</p>
 <div className="flex justify-between">
