@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import Navbar from './Navbar'
 import login from  '../public/login.png'
@@ -10,12 +10,23 @@ import LabelComponent from './Label'
 import Button from './Home/Button'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import auth from '../firebase.init'
+import useToken from '../hooks/useToken'
+import { useRouter } from 'next/navigation'
 type Props = {
 }
-
 function Login({}: Props) {
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const router=useRouter();
 
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    console.log("gUser",gUser)
+    const [token] = useToken( gUser);
+    useEffect(()=>{
+        if(token){
+            console.log("token",token)
+        router.back()
+        }
+    },[token])
+  
     const [inputValue, setInputValue] = useState('');
 
   return (
