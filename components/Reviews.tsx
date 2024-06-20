@@ -3,12 +3,12 @@ import React from 'react';
 import { IoIosStar } from 'react-icons/io';
 import Ellipse19 from  '/public/Ellipse19.png'
 
-const Reviews = ({CourseReview}) => {
+const Reviews = ({CourseReview}:any) => {
     return (
         <div>
              <div className='flex gap-[40px]'>
         <div className='mx-[12px] '>
-<Image src={Ellipse19}/>
+<Image src={Ellipse19} alt='ellipse4'/>
 <p className='whitespace-nowrap'>{CourseReview?.reviewedBy}</p>
 </div>
 <div>

@@ -22,9 +22,10 @@ import { UrlObject } from 'url';
 const Course = () => {
    
     const router = useRouter();
-
     const searchParam=useSearchParams();
+
     const redirectShipping=()=>{
+
         const courseId=searchParam.get("id")
 
         router.push(`/course/shopping-cart?id=${courseId}`,undefined);
@@ -167,7 +168,7 @@ const Course = () => {
 </div>
 </div>
 <div>
-{data?.CourseReviews&&data?.CourseReviews.map((CourseReviews) => (
+{data?.CourseReviews&&data?.CourseReviews.map((CourseReviews: { id: React.Key | null | undefined; }) => (
                 <Reviews key={CourseReviews.id} CourseReview={CourseReviews} />
             ))}
    

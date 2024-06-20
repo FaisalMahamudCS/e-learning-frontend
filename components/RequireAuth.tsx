@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 export default function isAuth(Component: any) {
   return function IsAuth(props: any) {
-    const auth = false;
+    const auth = true;
 
 
     useEffect(() => {

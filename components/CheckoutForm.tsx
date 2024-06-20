@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import OrderDetails from './OrderDetails';
 import Button from './Home/Button';
-const CheckoutForm = ({order}) => {
+const CheckoutForm = (order: { order: { id: any; }; }) => {
+    const id=order?.order?.id;
+
+
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
@@ -14,7 +17,7 @@ const CheckoutForm = ({order}) => {
 const price=100
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_URL}/api/products/create-payment-intent`, {
+        fetch(`${process.env.NEXT_PUBLIC_URL}/api/course/create-payment-intent`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -29,9 +32,11 @@ const price=100
                 }
             });
 
-    }, [])
-    const handleSubmit=async (event) =>{
+    }, [id])
+    const handleSubmit=async (event:any) =>{
+       
         event.preventDefault();
+
         if (!stripe || !elements) {
             return;
         }
@@ -64,6 +69,7 @@ const price=100
         );
 
         if (intentError) {
+            //@ts-ignore
             setCardError(intentError?.message);
             setProcessing(false);
         }
@@ -73,13 +79,15 @@ const price=100
             
             setSuccess('Congrats! Your payment is completed.')
             
-          
             const payment = {
-                order: _id,
-                transactionId: paymentIntent.id
+                transactionId: paymentIntent.id,
+                courseId:id,
+                //@ts-ignore
+                userId:JSON.parse(localStorage.getItem('user'))?.id
+
             }
-            fetch(`${process.env.REACT_APP_URL}/api/products/order/${_id}`, {
-                method: 'PUT',
+            fetch(`${process.env.NEXT_PUBLIC_URL}/api/course/createOrder`, {
+                method: 'POST',
                 headers: {
                     'content-type': 'application/json',
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -116,7 +124,7 @@ const price=100
                     }}
                 />
            
-                <button className=' h-12 flex flex-row justify-center items-center px-6 py-2.5  my-10 w-[210px] rounded-md bg-[#020617] text-white' type="submit" disabled={!stripe || !clientSecret || success}>
+                <button className=' h-12 flex flex-row justify-center items-center px-6 py-2.5  my-10 w-[210px] rounded-md bg-[#020617] text-white' type="submit" >
                     Pay
                 </button>
             </form>

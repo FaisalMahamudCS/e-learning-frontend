@@ -9,7 +9,7 @@ const Mentors = () => {
 <h1 className="font-bold mb-[10px]">Top Instructor</h1>
 <div className="flex justify-between gap-4">
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='Teacher'/>
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -25,7 +25,7 @@ const Mentors = () => {
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='teacher1'/>
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -41,7 +41,7 @@ const Mentors = () => {
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='teacher2'/>
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -57,7 +57,7 @@ const Mentors = () => {
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='teacher3'/>
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>
@@ -73,7 +73,7 @@ const Mentors = () => {
 </div>
 </div>
 <div className="flex px-[17.5px] py-[16px] flex-col box-border   border border-gray-200 rounded-[16px] shadow-[0_0_8px_0_rgba(59,130,246,0.12)] bg-white ">
-<Image src={teacher1}/>
+<Image src={teacher1} alt='teacher4'/>
 <div className="flex items-center justify-between flex-col mt-4">
 <p className="font-bold">Ronald Richard</p>
 <p>UI/UX Designer</p>

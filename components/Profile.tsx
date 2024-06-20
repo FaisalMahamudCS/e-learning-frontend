@@ -16,7 +16,7 @@ const Profile = () => {
             <Navbar/>
             <div className="flex mx-20 gap-10 mb-5">
                 <div>
-                    <Image src={profile4}/>
+                    <Image src={profile4} alt='profile4'/>
                     <p className='text-center'>John Doe</p>
                     <div></div>
                     <div className="w-1/4  p-4">

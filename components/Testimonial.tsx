@@ -12,7 +12,7 @@ const Testimonial = () => {
         
         <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
         <div className="flex my-2 ">
-        <Image src={review1}/>
+        <Image src={review1} alt='rev1'/>
         <div className="flex flex-col ml-[8px]">
         <p className="font-bold mt-[5px]">Jane Doe</p>
         <p>Designer</p>
@@ -24,7 +24,7 @@ const Testimonial = () => {
         
         <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
         <div className="flex my-2 ">
-        <Image src={review1}/>
+        <Image src={review1} alt='rev2'/>
         <div className="flex flex-col ml-[8px]">
         <p className="font-bold mt-[5px]">Jane Doe</p>
         <p>Designer</p>
@@ -36,7 +36,7 @@ const Testimonial = () => {
         
         <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. </p>
         <div className="flex my-2 ">
-        <Image src={review1}/>
+        <Image src={review1} alt='rev3'/>
         <div className="flex flex-col ml-[8px]">
         <p className="font-bold mt-[5px]">Jane Doe</p>
         <p>Designer</p>

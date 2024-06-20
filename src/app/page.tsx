@@ -276,7 +276,7 @@ Start your instruction today
 <div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px] py-[80px]">
 
 <div className="flex flex-col text-white  ">
-  <Image src={logo2} alt="Logo" alt='Image' />
+  <Image src={logo2} alt="Logo2"  />
   <p>Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences. </p>
 </div>

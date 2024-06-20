@@ -44,16 +44,16 @@ const Payment = () => {
             <Navbar/>
             <div className='mx-[80px]'>
             <p className='font-bold text-[31px] mb-[20px] mt-[20px]'>Checkout Page</p>
-        <div class="card w-50 max-w-md bg-base-100  my-12">
-            <div class="card-body">
-                {/* <p className="text-success font-bold">Greeting {order.userName}</p> */}
-                <h2 class="card-title"> Pay for {data?.name}</h2>
+        <div className="card w-50 max-w-md bg-base-100  my-12">
+            <div className="card-body">
+                {/* <p classNameName="text-success font-bold">Greeting {order.userName}</p> */}
+                <h2 className="card-title"> Pay for {data?.name}</h2>
            
                 <p>Please pay: ${data?.price}</p>
             </div>
         </div>
-        <div class="">
-            <div class="w-full">
+        <div className="">
+            <div className="w-full">
                 <Elements stripe={stripePromise}>
                     <CheckoutForm order={data} />
                 </Elements>

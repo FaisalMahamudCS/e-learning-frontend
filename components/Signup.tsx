@@ -19,7 +19,7 @@ function Signup({}: Props) {
  <Navbar/>
        <div className="flex justify-between gap-[40px]">
 <div>
-    <Image src={signbg}/>
+    <Image src={signbg} alt='sign'/>
 </div>
 <div className='mr-[80px]'>
     <h2 className='text-center text-[32px] mt-[94px] font-bold'>Create your account</h2>

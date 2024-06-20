@@ -46,7 +46,7 @@ const LineChart = () => {
       },
     },
   };
-
+//@ts-ignore
   return <Line data={data} options={options} />;
 };
 

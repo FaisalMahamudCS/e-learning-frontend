@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="bg-[#1E293B] text-white flex justify-between gap-[122px] px-[80px] py-[80px]">
 
 <div className="flex flex-col text-white  ">
-  <Image src={logo2}/>
+  <Image src={logo2} alt='alt footer'/>
   <p>Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences. </p>
 </div>
@@ -29,7 +29,7 @@ Byway is a leading online learning platform dedicated to providing high-quality,
     <p>Address: 123 Main Street, Anytown, CA 12345 </p>
     <p>Tel: +(123) 456-7890</p>
     <p>Mail  test@mail.com</p>
-    <Image src={logo}/>
+    <Image src={logo} alt='adv'/>
   </div>
 </div>
         </>
